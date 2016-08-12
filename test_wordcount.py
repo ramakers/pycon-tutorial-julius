@@ -36,10 +36,10 @@ def test_consume_2():
     
 def test_consume_3():
     # check something tricky: whitespace at beginning & end of line
-    testfile = _make_testfile('sometext.txt', ' a b c d e')
+    testfile = _make_testfile('sometext.txt', 'a b c d e')
     chars, words, lines = wordcount_lib.consume(testfile)
 
-    assert chars == 10                     # includes whitespace in char count
+    assert chars == 9                     # includes whitespace in char count
     assert words == 5
     assert lines == 1
     
